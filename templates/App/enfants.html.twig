@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Choeur d'Enfants -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">CHOEUR D'ENFANTS</h1>
+	<section class="row m-4 px-4 adultes">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">L'histoire</h2>
+			<p class="mx-2 py-2">
+				Après avoir pris l’initiative de créer ce chœur d’enfants en 2007, Olivier Clément confie la direction du choeur à l'ancien président Jean-Marc BISSAUGE qui l'a régulièrement secondé lors des répétitions. Chaque mardi soir, Annie Bichebois pour l'accompagnement piano et Martine Bissauge pour la mise en espace, soutiennent Jean-Marc dans son engagement auprès des enfants.Le chœur comprend une quinzaine de chanteurs. La plupart ne savent pas lire la musique, mais la passion qui les anime pour le chant choral, sous la direction de Jean-Marc, les a déjà amenés à un niveau musical qui les a conduits à se produire au Festi'mômes de Thônes ou encore avec la célèbre chorale "La Cigale" de Lyon. Il a participé à plusieurs spectacles et se produit régulièrement lors d'animations locales ou en EPHAD. Un thème chaque année mais toujours le même esprit chaleureux et gai. Venez partager tous ces bons moments avec eux!  
+			</p>
+			<div class="photo d-flex align-items-center">
+				<img src="{{ asset('img/enfantsbis.jpg') }}" alt="photo chorale enfants">
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les répétitions</h2>
+			<p class="mx-2 py-2">
+				<h3 class="text-center">
+					<strong>mardi 17h-18h30
+						ancienne école primaire - Frangy
+					</strong>
+				</h3>
+			</p>
+			<div class="photo">
+				<img src="{{ asset('img/enfants1.jpg') }}" alt="photo chorale enfants">
+			</div>
+
+			<p class="text fs12">
+				
+			</p>
+		</div>
+	</section>
+{% endblock %}

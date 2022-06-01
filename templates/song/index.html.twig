@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les chansons -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="example-wrapper">
+		<h1 class="text-center my-4">LES CHANSONS</h1>
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{path('song_add')}}" class="btn ms-4">Ajouter une chanson
+				<i class="fa-solid fa-plus"></i>
+			</a>
+		{% endif %}
+		{% for song in songs %}
+			<section class="row m-4 px-4">
+				<div class="text col-12 col-md-6 col-lg-6 my-4">
+						<a href="{{path('song_show', {id:song.id})}}" class="btn">
+							<h2 class="text-center">{{ song.name }}</h2>
+						</a>
+					<p class="text-center">{{ song.content }}</p>
+
+				</div>
+				{% for image in song.images %}
+					<div class="photo col-12 col-md-6 col-lg-6 my-4">
+						<img
+						class="img-fluid" src="{{asset('/uploads/'~ image.name)}}" alt="image téléchargée">
+					{# <a href="{{path('song_delete_image' , {id: image.id})}}" data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer l'image</a> #}
+					</div>
+				{% endfor %}
+			</section>
+		{% endfor %}
+	</div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{asset('js/image.js')}}"></script>
+{% endblock %}

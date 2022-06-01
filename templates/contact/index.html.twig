@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}contact  -
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	<h1 class="text-center my-4">CONTACT</h1>
+	<section class="register row mx-auto my-4">
+		<div class="photo col-8 my-4 mx-auto">
+			<div class="bg-white p-0 contact-form">				
+				{# <div class="form-group">
+					<form name="contact" method="post">
+						<div class="mb-3">
+							<label for="contact_firstname" class="form-label required">Prénom</label><input type="text" id="contact_firstname" name="contact[firstname]" required="required" maxlength="255" class="form-control form-control">
+						</div>
+						<div class="mb-3">
+							<label for="contact_lastname" class="form-label required">Nom</label><input type="text" id="contact_lastname" name="contact[lastname]" required="required" maxlength="255" class="form-control form-control">
+						</div>
+						<div class="mb-3">
+							<label for="contact_phone" class="form-label">Téléphone</label><input type="number" id="contact_phone" name="contact[phone]" class="form-control form-control">
+						</div>
+					</form>
+				</div>
+				<div class="form-group">
+					<div class="mb-3">
+						<label for="contact_email" class="form-label required">Email</label><input type="text" id="contact_email" name="contact[email]" required="required" maxlength="180" class="form-control form-control">
+					</div>
+
+				</div>
+				<div class="form-group">
+					<div class="mb-3">
+						<label for="contact_message" class="form-label required">Message</label>
+						<textarea id="contact_message" name="contact[message]" required="required" rows="5" class="form-control form-control"></textarea>
+					</div>
+
+				</div>
+				<div class="form-group example-wrapper d-flex justify-content-center">
+					<input type="submit" value="Envoyer" class="btn py-3 px-5" name="contact[save]">
+				</div> #}
+				{{ form_start(our_form) }}
+				{{ form_end(our_form) }}
+			</div>
+		</div>
+	</div>
+	{% for message in app.flashes('success') %}
+  		<p>{{ message }}</p>
+	{% endfor %}
+</section>{% endblock %}

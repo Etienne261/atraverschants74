@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ajouter une ressource - {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center my-4">AJOUTER UNE RESSOURCE</h1>
+    {{ form_start(formresource) }}
+    {{ form_end(formresource) }}
+</div>
+
+{% endblock %}

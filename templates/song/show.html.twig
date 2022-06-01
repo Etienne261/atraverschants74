@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{song.name}}
+	-
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">RESSOURCES DE LA CHANSON :
+		{{song.name}}
+	</h1>
+	<div class="example-wrapper">
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{path('ressource_add')}}" class="btn ms-4">Ajouter une ressource
+				<i class="fa-solid fa-plus"></i>
+			</a>
+		{% endif %}
+	</div>
+	<section id="song_ressources" class="example-wrapper">
+		{% for resource in song.resources %}
+			<div class="mx-1 border">
+				{% if is_granted('ROLE_ADMIN') %}
+					<a href="{{path('ressource_show', {id:resource.id})}}" class="d-flex justify-content-center py-4 mx-auto text-uppercase">
+						<i class="fa-solid fa-play mx-4 fa-xl py-2"></i>
+						{{ resource.name }}</a>
+				{% else %}
+					<a href="{{resource.link}}" target="_blank" class="d-flex justify-content-center py-4 mx-auto text-uppercase">
+						<i class="fa-solid fa-play mx-4 fa-xl py-2"></i>
+						{{ resource.name }}</a>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</section>
+	<div class="d-flex justify-content-center example-wrapper">
+		<a href="{{path('ressource_record')}}" class="btn">S'ENREGISTRER</a>
+	</div>
+	<div class="d-flex justify-content-start example-wrapper">
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{path('song_delete', {id:song.id})}}" class="btn ms-4">Supprimer la chanson
+				{{song.name}}
+				<i class="fa-solid fa-trash"></i>
+			</a>
+		{% endif %}
+	</div>
+	<div class="d-flex justify-content-start example-wrapper my-2">
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{path('song_edit', {id:song.id})}}" class="btn ms-4">Editer la chanson
+				{{song.name}}
+				<i class="fa-solid fa-pen-to-square"></i>
+			</a>
+		{% endif %}
+	</div>
+	<div class="example-wrapper d-flex justifycontent-center">
+		<a href="{{path('song_index')}}" class="btn">Revenir aux chansons
+			<i class="fa-solid fa-rotate-left"></i>
+		</a>
+	</div>
+{% endblock %}

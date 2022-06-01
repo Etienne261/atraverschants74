@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil! -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<h1 class="text-center my-4">ACCUEIL</h1>
+	<section class="row m-4 px-4">
+		<div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/chorale.jpg') }}" alt="photo chorale adultes">
+		</div>
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Présentation du choeur d'adultes</h2>
+			<p class="mx-2 py-2">Vers la fin des années 70, un groupe d'habitants de Chaumont, petit village du Vuache près de Frangy (74), amoureux du chant, décide de se rassembler autour d'un chef de choeur, Marc Reymond, afin d'exprimer leur passion. Ainsi ils font naître la chorale de Chaumont.
+																																Quelques années plus tard, Marc Reymond décide de partir....</p>
+			<a class="btn" href="{{ path('app_adult') }}">EN SAVOIR
+				<strong class="font-weight-bold">+</strong>
+			</a>
+		</div>
+	</section>
+
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Présentation du choeur d'enfants</h2>
+			<p class="mx-2 py-2">Après avoir pris l’initiative de créer ce chœur d’enfants en 2007, Olivier Clément confie la direction du choeur à l'ancien président Jean-Marc BISSAUGE qui l'a régulièrement secondé lors des répétitions. Chaque mardi soir, pour la mise en espace, Martine, son épouse, soutient Jean-Marc dans son engagement auprès des enfants....</p>
+			<a class="btn" href="{{ path('app_children') }}">EN SAVOIR
+				<strong class="font-weight-bold">+</strong>
+			</a>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/enfants.png') }}" alt="photo chorale enfants">
+		</div>
+	</section>
+
+	<section class="voix row m-4 px-4">
+		<h2 class="text-center">
+			<a class="btn" href="{{path('app_voix')}}">LES VOIX</a>
+		</h2>
+		<div class="photo col-12 col-md-6 col-lg-3 my-4 voice">
+			<img src="{{ asset('img/soprane.png') }}" alt="castafiore soprano">
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="{{ path('app_soprane') }}">SOPRANE</a>
+			</div>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-3 my-4 voice">
+			<img src="{{ asset('img/alto.png') }}" alt="caricature alto">
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="{{path('app_alto')}}">ALTO</a>
+			</div>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-3 my-4 voice">
+			<img src="{{ asset('img/tenor.png') }}" alt="caricature tenor">
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="{{path('app_tenor')}}">TENOR</a>
+			</div>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-3 my-4 voice">
+			<img src="{{ asset('img/basse.png') }}" alt="caricature basse">
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="{{path('app_basse')}}">BASSE</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="carte row m-4 px-4">
+		<div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4727.540337307316!2d5.928838804760971!3d46.016942930080816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b7faa64627a35%3A0x61261bb51222695e!2s125%20Rue%20du%20Grand%20Pont%2C%2074270%20Frangy!5e0!3m2!1sfr!2sfr!4v1646161986210!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-6 mt-4">
+			<div class="rating">
+				<h2 class="mt-4">
+					<a href="#" class="text-dark">AVIS</a>
+				</h2>
+				<div class="supaviews">
+					<div class="supaviews__gradient"></div>
+					<div class="supaviews__add">
+						<div class="supaview">
+							<form id="review">
+								<fieldset class="supaview__rating">
+									<input type="radio" id="star5" name="rate" value="5"/><label for="star5"></label>
+									<input type="radio" id="star4" name="rate" value="4"/><label for="star4"></label>
+									<input type="radio" id="star3" name="rate" value="3"/><label for="star3"></label>
+									<input type="radio" id="star2" name="rate" value="2"/><label for="star2"></label>
+									<input type="radio" id="star1" name="rate" value="1"/><label for="star1"></label>
+								</fieldset>
+								<div class="supaview__copy">
+									<input type="text" name="name" placeholder="Nom"/>
+									<textarea name="message" placeholder="Message" rows="5"></textarea>
+								</div>
+								<button class="supaview__submit">Soumettre</button>
+							</form>
+						</div>
+					</div>
+					<div class="supaviews__list">
+						<div class="supaview">Ca fait un peu vide...</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

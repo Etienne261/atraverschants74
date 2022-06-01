@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alto - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center my-4">ALTO</h1>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les Altis</h2>
+			<p class="">
+				Elles sont le sel du monde, du moins le croient-elles. Ce sont des personnes simples, sérieuses et 
+                toujours présentes aux répétitions. La position des altis est unique dans le chœur : elles ne peuvent jamais se 
+                plaindre d'avoir à chanter trop haut ou trop bas et elles n'ignorent pas que tous les autres pupitres trouvent 
+                la partie d'alto pitoyablement facile. Mais les altis savent qu'il n'en est rien et que, lorsque les sopranes 
+                s'égosillent sur le la, elles doivent chanter des passages compliqués, pleins de dièses et de bémols, avec des 
+                rythmes impossibles que personne ne remarque parce que les sopranes chantent trop fort (ainsi que les basses 
+                comme d'habitude).
+			</p>
+            <div class="photo">
+        	    <img src="{{ asset('img/clara_luciani.jpg') }}" alt="photo clara luciani">
+            </div>
+		</div>
+        <div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/alto.png') }}" alt="caricature alto">
+            <div class="text">
+                <p class="my-4">
+                    Les altis se font un malin et secret plaisir à conspirer pour faire baisser les sopranes. 
+                    Elles ont une méfiance innée à l'égard des ténors, car ils chantent presque dans la même tessiture qu'elles, 
+                    mais ils croient avoir un meilleur son. Les altis aiment les basses et elles chantent volontiers en duo avec 
+                    eux. De toute façon, le chant des basses ne sonne que dans le grondement et c'est le seul moment où elles ont 
+                    vraiment une chance de se faire entendre. Un autre sujet de plainte des altis est qu'elles sont toujours trop 
+                    nombreuses. Elles ne peuvent par conséquent jamais chanter vraiment fort.
+                </p>
+            </div>
+		</div>
+	</section>
+{% endblock %}

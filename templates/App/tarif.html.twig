@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tarifs - {{ parent() }}{% endblock %}
+
+{% block body %}
+<h1 class="text-center my-4">TARIFS</h1>
+
+	<section class="tarif1 row m-4 px-4">
+		<a href="{{ path('pay_index') }}" class="col-12 my-4 btn">
+			<p class="fstg d-flex justify-content-start mt-4">ADULTES</p>
+			<p class="fsttg d-flex justify-content-end">100€</p>
+		</a>
+	</section>
+	<section class="tarif2 row m-4 px-4">
+		<a href="{{ path('pay_index') }}" class="col-12 my-4 btn">
+			<p class="fstg d-flex justify-content-start mt-4">ENFANTS</p>
+			<p class="fsttg d-flex justify-content-end">50€</p>
+		</a>
+	</section>
+	<section class="tarif3 row m-4 px-4">
+		<a href="{{ path('pay_index') }}" class="col-12 my-4 btn">
+			<p class="fstg d-flex justify-content-start">COUPLE</p>
+			<p class="fsttg d-flex justify-content-end">80€/pers</p>
+		</a>
+	</section>
+
+{% endblock %}

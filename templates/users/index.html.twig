@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Utilisateur
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center m-4">Bonjour
+		{{ app.user.firstname }}!</h1>
+	<section class="row m-4 px-0 px-md-2 px-lg-4 py-4">
+		<p>
+			<strong>Nom</strong>
+			:
+			<span class="text-uppercase">{{ app.user.lastname }}</span>
+		</p>
+		<p>
+			<strong>Prénom</strong>
+			:
+			{{ app.user.firstname }}</p>
+		<p>
+			<strong>E-mail</strong>
+			:
+			<a href="">{{ app.user.email }}
+				<i class="fa-solid fa-pen-to-square"></i>
+			</a>
+		</p>
+	</section>
+{% endblock %}

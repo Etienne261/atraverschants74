@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ténor - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center my-4">TENOR</h1>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les Ténors</h2>
+			<p class="">
+				Les Ténors sont des "enfants gâtés". Avec cela, on a tout dit. Pour une seule raison : il n'y en a jamais assez 
+                et les chefs de chœurs vendraient leur âme plutôt que de laisser partir un ténor… aussi mauvais soit-il ! Et 
+                puis, pour quelque obscure raison, les quelques ténors que l'on a sont toujours réellement bons - ça va de soi 
+                et c'est l'une des causes d'ennui dans la vie. Du coup, il n'est pas étonnant que les ténors aient toujours une 
+                grosse tête - après tout, sans eux, qui pourrait causer la pâmoison des sopranos ? La seule chose qui puisse 
+                déstabiliser les ténors est l'accusation (venant en principe des basses) que l'on ne peut pas être un vrai homme 
+                et chanter si haut. De leur manière perverse habituelle, les ténors rejettent toujours ce grief, tout en se 
+                plaignant plus fort encore que le compositeur est un vrai sadique pour les faire chanter si haut. 
+			</p>
+            <div class="photo">
+        	    <img src="{{ asset('img/Luciano_Pavarotti.png') }}" alt="photo luciano Pavarotti">
+            </div>
+		</div>
+        <div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/tenor.png') }}" alt="caricature ténor">
+            <div class="text">
+                <p class="my-4">
+                    La relation des ténors avec le chef est à mi-chemin entre amour et haine, car le chef leur dit toujours de 
+                    chanter plus fort ... parce qu'ils sont si peu nombreux. Depuis que l'on écrit l'histoire, on n'a jamais vu 
+                    un chef demander aux ténors de chanter moins fort dans un passage forte. Les ténors se sentent menacés d'une 
+                    manière ou d'une autre par les autres pupitres : par les sopranos parce qu'elles peuvent atteindre ces notes 
+                    incroyablement hautes ; par les altis parce qu'elles n'ont aucun problème pour chanter les notes qui sont si 
+                    hautes pour eux et par les basses parce que, bien qu'ils soient incapables de chanter plus haut qu'un mi, ils 
+                    chantent suffisamment fort pour noyer les ténors. Évidemment, les ténors préféreraient mourir que d'admettre 
+                    une quelconque de ces remarques. Ajoutons un fait peu connu : les ténors bougent leurs sourcils plus que 
+                    quiconque lorsqu'ils chantent.
+                </p>
+            </div>
+		</div>
+	</section>
+  
+{% endblock %}

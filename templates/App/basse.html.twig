@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Basse - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center my-4">BASSE</h1>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les Basses</h2>
+			<p class="">
+				Les basses chantent les notes les plus graves. Et ceci explique cela. Ce sont des gens impassibles, dignes de 
+                confiance, plus barbus que les autres. Les basses se sentent perpétuellement mal aimés, mais ils sont eux-mêmes 
+                convaincus que ce sont eux qui ont la partie la plus importante (un avis partagé par les musicologues, mais 
+                certes pas par les sopranos ou les ténors)… même s'il s'agit de la partie la plus ennuyeuse de toutes, où ils 
+                chantent toujours la même note (ou à la quinte) sur une page entière. Ils compensent cet ennui en chantant le 
+                plus fort possible. La plupart des basses sont des joueurs de tuba nés. Les basses sont le seul pupitre qui 
+                puisse se plaindre régulièrement d'avoir à chanter si bas,  
+			</p>
+            <div class="photo">
+        	    <img src="{{ asset('img/Abdrazakov.png') }}" alt="photo Abdrazakov">
+            </div>
+		</div>
+        <div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/basse.png') }}" alt="caricature basse">
+            <div class="text">
+                <p class="my-4">
+                    et ils font d'horribles grimaces lorsqu'ils essaient d'atteindre des notes très basses. Les basses sont des 
+                    gens charitables, mais leur charité n'est pas grande à l'égard des ténors, qu'ils considèrent être des 
+                    poseurs finis. Les basses aiment les altis sauf lorsque c'est en duo et que les altis ont la partie belle. 
+                    Quant aux sopranos, elles sont simplement dans un univers opposé que les basses jugent incompréhensible. Ils 
+                    ne peuvent pas imaginer, quand elles font des fautes, que l'on puisse chanter si haut et si mal. Lorsqu'une 
+                    basse se trompe, les trois autres voix le couvrent, il peut alors poursuivre tranquillement son chemin en 
+                    sachant que, une fois ou l'autre, d'une manière ou d'une autre, ils se retrouvera dans la bonne tonalité.
+                </p>
+            </div>
+		</div>
+	</section>
+  
+{% endblock %}

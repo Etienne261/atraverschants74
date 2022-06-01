@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	{% for flash_error in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+	{% endfor %}
+
+	<h1 class="text-center my-4">INSCRIPTION</h1>
+	<section class="register row mx-auto my-4">
+		<div
+			class="photo col-8 my-4 mx-auto inscription">
+			{# 
+						<form name="registration_form" method="post">
+							<div>
+								<label for="lastname" class="text-dark">Nom *:</label>
+								<div class="mb-3"><input type="text" id="registration_form_lastname" name="registration_form[lastname]" required="required" maxlength="255" class="form-control">
+								</div>
+							</div>
+							<div>
+								<label for="firstname" class="text-dark">Prénom *:</label>
+								<div class="mb-3"><input type="text" id="registration_form_firstname" name="registration_form[firstname]" required="required" maxlength="255" class="form-control">
+								</div>
+							</div>
+							<div>
+								<label for="phone" class="text-dark">Téléphone *:</label>
+								<div class="mb-3"><input type="number" id="registration_form_phone" name="registration_form[phone]" class="form-control">
+								</div>
+							</div>
+							<div>
+								<label for="username" class="text-dark">Email *:</label>
+								<div class="mb-3"><input type="text" id="registration_form_email" name="registration_form[email]" required="required" maxlength="180" class="form-control">
+								</div>
+							</div>
+							<div>
+								<label for="password" class="text-dark">Mot de passe *:</label>
+								<div class="mb-3"><input type="password" id="registration_form_plainPassword" name="registration_form[plainPassword]" required="required" autocomplete="new-password" class="form-control">
+								</div>
+							</div>
+							<div>
+								<label for="zip_code" class="text-dark">CODE POSTAL (non-obligatoire)</label>
+								<input type="text" class="text-dark" name="zip_code" id="zip_code">
+								<button type="button" class="text-dark my-4 mx-4 btn" onclick="loadDoc()">Chercher</button>
+							</div>
+							<div>
+			
+								<label for="ville" class="text-dark d-flex">VILLE</label>
+								<select name="city" class="text-dark mb-4 d-flex justify-content-end" id="city"></select>
+							</div>
+							<div class="row my-4 text-dark">
+								<div class="mb-3">
+									<div class="form-check"><input type="checkbox" id="registration_form_agreeTerms" name="registration_form[agreeTerms]" required="required" class="form-check-input" value="1">
+										<label class="form-check-label required" for="registration_form_agreeTerms">Acceptez les conditions</label>
+									</div>
+								</div>
+							</div>
+							<a href="/app" class="d-flex justify-content-center">
+								<button type="submit" class="btn">
+									S'INSCRIRE
+								</button>
+							</a>
+							<input type="hidden" id="registration_form__token" name="registration_form[_token]" value="a651bb6d45955.DKM0ucqpiwuPG0ZJK0klEuMa1WaPKKjvnmmnFJOtNXc.Netg9ufl6ULJVRA9WD8SWrRK7V7lRNm8qjjWQKSVQwZl_HvYgvi8TfttKQ"></form>
+						</form> 
+						#}
+			{{ form_start(registrationForm) }}
+			
+			{{ form_end(registrationForm) }}
+			<div class="apizip">
+				<div>
+					<label for="zip_code" class="text-dark">CODE POSTAL (non-obligatoire)</label>
+					<input type="text" class="text-dark" name="zip_code" id="zip_code">
+					<button type="button" class="text-dark my-4 mx-4 btn" onclick="loadDoc()">Chercher</button>
+				</div>
+				<div>
+
+					<label for="ville" class="text-dark d-flex">VILLE</label>
+					<select name="city" class="text-dark mb-4 d-flex justify-content-end" id="city"></select>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% block javascripts %}
+		<script src="{{ asset('js/apizip.js') }}"></script>
+	{% endblock %}
+{% endblock %}

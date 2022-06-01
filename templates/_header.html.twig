@@ -1,0 +1,101 @@
+<header class="navbar navbar-expand-lg navbar-light main-nav py-4 justify-content-between" id="main-header">
+	<div class="logo py-4 col-2">
+		<a href="{{ path('app_index') }}">
+			<img src="{{ asset('img/logo.png') }}" alt="Logo - A TRAVERS CHANTS">
+		</a>
+	</div>
+	<nav class="col-9 flex-wrap py-4 menu collapse navbar-collapse justify-content-end">
+		<div class="clef col-2">
+			<img src="{{asset('img/clef.png')}}" alt="clef de sol" class="pt-4 mb-4">
+		</div>
+		<div class="line col-10">
+			<div class="navbar-links me-4" type="hidden">
+				<label type="hidden ">|</label>
+			</div>
+		</div>
+		<div class="firstline col-10" id="navbarText">
+			<div class="navbar-links  me-2">
+				<a href="{{ path('app_index') }}" class="text-center">ACCUEIL</a>
+				<a href="{{ path('app_adult') }}" class="text-center">CHOEUR ADULTES</a>
+				<a href="{{ path('app_children') }}" class="text-center">CHOEUR ENFANTS</a>
+				<a href="{{ path('app_voix') }}" class="pe-4 text-center">LES VOIX</a>
+			</div>
+		</div>
+		<div class="secondline col-10">
+			<div class="navbar-links me-2">
+				<a href="{{ path('app_events') }}" class="text-center">EVENEMENTS/CONCERTS</a>
+				<a href="{{ path('blog_index') }}" class="text-center">BLOG</a>
+				<a href="https://www.spreadshirt.fr/personnaliser/v%C3%AAtements?affiliateID=1209000&gclid=EAIaIQobChMIoY_Lntip9gIVT9nVCh3lOwPNEAAYASAAEgLsC_D_BwE" target="_blank" class="text-center">BOUTIQUE (A VENIR)</a>
+			</div>
+		</div>
+		<div class="thirdline col-10">
+			<div class="navbar-links me-4">
+				<a href="{{ path('app_program') }}" class="text-center">PROGRAMME</a>
+				{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+					<a href="{{ path('song_index') }}">CHANTE !</a>
+					<a href="{{ path('users_index') }}">PROFIL</a>
+					<a href="{{ path('app_logout') }}">DECONNEXION</a>
+				{% else %}
+					<a href="{{ path('login') }}" class="text-center">CONNEXION</a>
+					<a href="{{ path('app_register') }}" class="pe-4 text-center">INSCRIPTION</a>
+				{% endif %}
+			</div>
+		</div>
+		<div class="col-10">
+			<div class="me-4 linebas" type="hidden">
+				<label type="hidden ">|</label>
+			</div>
+		</div>
+	</nav>
+	<div class="container py-0">
+		<button class="navbar-toggler button_position" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end color_burger" id="navbarText">
+			<ul class="navbar-nav mb-2 mb-lg-0 main-menu">
+				<li class="nav-item main-menu-element">
+					<a class="nav-link active text-light" aria-current="page" href="{{ path('app_index') }}">ACCUEIL</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('app_adult') }}">CHOEUR ADULTES</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('app_children') }}">CHOEUR ENFANTS</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('app_voix') }}">LES VOIX</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('app_events') }}">EVENEMENTS/CONCERTS</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('blog_index') }}">BLOG</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="https://www.spreadshirt.fr/personnaliser/v%C3%AAtements?affiliateID=1209000&gclid=EAIaIQobChMIoY_Lntip9gIVT9nVCh3lOwPNEAAYASAAEgLsC_D_BwE" target="_blank">BOUTIQUE (A VENIR)</a>
+				</li>
+				<li class="nav-item main-menu-element">
+					<a class="nav-link text-light" href="{{ path('app_program') }}">PROGRAMME</a>
+				</li>
+				{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+					<li class="nav-item main-menu-element">
+						<a class="nav-link text-light" href="{{ path('song_index') }}">CHANTE !</a>
+					</li>
+					<li class="nav-item main-menu-element">
+						<a class="nav-link text-light" href="{{ path('users_index') }}">PROFIL</a>
+					</li>
+					<li class="nav-item main-menu-element">
+						<a class="nav-link text-light" href="{{ path('app_logout') }}">DECONNEXION</a>
+					</li>
+				{% else %}
+					<li class="nav-item main-menu-element">
+						<a class="nav-link text-light" href="{{ path('login') }}">CONNEXION</a>
+					</li>
+					<li class="nav-item main-menu-element">
+						<a class="nav-link text-light" href="{{ path('app_register') }}">INSCRIPTION</a>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+</header>

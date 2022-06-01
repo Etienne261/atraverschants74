@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les ressources de la chanson  - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+		<h1 class="text-center my-4">LES RESSOURCES</h1>
+		<a href="{{path('ressource_add')}}" class="px-4">Ajouter une ressource</a>
+		{% for resource in resources %}
+			<div class="folder">
+				<a href="{{path('ressource_show', {id:resource.id})}}">
+					lire la ressource: {{ resource.name }}</a>
+			</div>
+		{% endfor %}
+
+	</div>
+</div>{% endblock %}

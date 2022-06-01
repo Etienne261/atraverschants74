@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{resource.name}}
+	-
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center">Détails de la ressource:
+		{{resource.name}}</h1>
+	<div class="example-wrapper d-flex justify-content-center">
+		<a href="{{resource.link}}" target="_blank" class="btn">
+			<h3>
+				<i class="fa-solid fa-music fa-xl mx-4"></i>
+				{{resource.name}}</h3>
+		</a>
+	</div>
+	<p class="ms-4">Créée le :{{resource.CreatedAt|date('d/m/Y')}}</p>
+	<p class="ms-4">Modifié le :{{resource.UpdatedAt|date('d/m/Y')}}</p>
+	<div class="example-wrapper d-flex justify-content-start ms-4">
+		<a href="{{path('ressource_delete', {id:resource.id})}}" class="ms-4">Supprimer la ressource
+			{{resource.name}}
+			<i class="fa-solid fa-trash"></i>
+		</a>
+	</div>
+	<div class="example-wrapper d-flex justify-content-start ms-4">
+		<a href="{{path('ressource_edit', {id:resource.id})}}" class="ms-4">Editer la ressource
+			{{resource.name}}
+			<i class="fa-solid fa-pen-to-square"></i>
+		</a>
+	</div>
+	<div class="example-wrapper d-flex justify-content-between">
+		<a href="{{path('song_show',{id:resource.song.id})}}" class="btn">Revenir aux ressources
+			<i class="fa-solid fa-rotate-left"></i>
+		</a>
+		<a href="{{path('song_index')}}" class="btn">Revenir aux chansons
+			<i class="fa-solid fa-rotate-left"></i>
+		</a>
+	</div>
+{% endblock %}

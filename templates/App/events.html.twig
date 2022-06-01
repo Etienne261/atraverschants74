@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Evènements et Concerts -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">LES PROCHAINS EVENEMENTS ET CONCERTS</h1>
+	<section class="row m-4 px-4">
+		<div class="photo col-12 col-md-6 col-lg-6 my-4 event">
+			<img src="{{ asset('img/vide-grenier.jpg') }}" alt="affiche vide-grenier">
+		</div>
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Prochain Evènement</h2>
+			<p class="mx-2 py-2">Nous y voilà ! Les rayons du soleil se mêlent au parfum des fleurs fraichement écloses...L’humeur est légère et la saison des Brocantes et des Vide-greniers est enfin lancée. Retrouvez nous le 19 Juin!
+											....</p>
+			<p class="mx-2 py-2">Entrée gratuite - 50 exposants - 10€ par emplacement (3 mètres linéaires)
+			</p>
+		</div>
+	</section>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Prochain/Dernier Concert</h2>
+			<p class="mx-2 py-2">Carmina Burana à Frangy Haute Savoie Officiel... la Clé des Usses y était et c'était juste grandioooose! 😍👏🏼👏🏼👏🏼 🎶</p>
+			<p>Article du "<strong><em>dauphiné libéré</em></strong>" :</p>
+			<div class="photo col-12 my-4 event">
+				<img src="{{ asset('img/dauphine.jpg') }}" alt="article journal dauphiné libéré">
+			</div>
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-6 my-4 event">
+			<img src="{{ asset('img/carmina.jpg') }}" alt="affiche carmina burana">
+		</div>
+	</section>
+{% endblock %}

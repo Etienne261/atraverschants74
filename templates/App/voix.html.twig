@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Voix -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">LES VOIX</h1>
+	<section class="row m-4 px-4">
+		<div class="photo col-12 col-md-6 col-lg-6 my-4 d-flex align-items-center">
+			<img src="{{ asset('img/micro.jpg') }}" alt="photo micro crooner">
+		</div>
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les 10 règles d’or du choriste</h2>
+			<ul class="regles fs12">
+				<li>🔸<strong>Règle N°1</strong>
+					: chantez tous le même morceau</li>
+				<li>🔸<strong>Règle N°2</strong>
+					: dès que vous chantez une fausse note, regardez aussitôt et furieusement le choriste le plus proche en veillant bien à ce que le chef de chœur le remarque</li>
+				<li>🔸<strong>Règle N°3</strong>
+					: toujours bien prendre le temps de s’échauffer la voix avant de chanter, cela permet de chanter faux avec la conscience tranquille</li>
+				<li>🔸<strong>Règle N°4</strong>
+					: une note juste mais chantée au mauvais moment est une note fausse (et vice-versa)</li>
+				<li>🔸<strong>Règle N°5</strong>
+					: si tous les membres du pupitre dans lequel vous êtes se trompent, .... les suivre</li>
+				<li>🔸<strong>Règle N°6</strong>
+					: si un passage musical est difficile, ralentir. Si il est facile, accélérer. Tout s’arrangera à la fin</li>
+				<li>🔸<strong>Règle N°7</strong>
+					: quand tout le chœur finit de chanter, ne pas continuer à chanter les notes qu’il vous reste</li>
+				<li>🔸<strong>Règle N°8</strong>
+					: une fausse note chantée avec timidité est une fausse note. Une fausse note chantée avec autorité est une interprétation</li>
+				<li>🔸<strong>Règle N°9</strong>
+					: en cas d’oubli ponctuel de paroles, ne pas s’inquiéter. En cas d’oubli régulier, consultez. Dans les deux cas, toujours regarder le chef de chœur avec assurance, détermination et sérénité</li>
+				<li>🔸<strong>Règle N°10</strong>
+					: pour éviter les « mauvais départs », chantez chaque phrase uniquement à partir de la troisième syllabe</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="row m-4 px-4">
+		<h2 class="text-center my-4">Anthologie du portrait de choriste</h2>
+		<p class="fs12">
+			Amis choristes, vous vous reconnaîtrez certainement à travers la redoutable caricature décrite par Jean
+									BOUCHON né en 1955 à Lyon, personnage partagé entre la musique et la littérature et Directeur de
+									l'Académie de Musique de Nice depuis 1984.
+		</p>
+		<ul class="regles fs12">
+			<li>🙉<strong>LE SANS GENE</strong>	: Il a l’air de souffrir quand c’est un autre qui chante. C’est pour cela qu’il se bouche toujours une oreille. Bruyant il parle haut, interpelle le chef. Chaque chorale a son sans-gêne, et elle doit faire avec…</li>
+			<li>🦥<strong>LE PARESSEUX</strong>	: C’est un homme doux, un rêveur qui s’est fourvoyé dans une chorale et ne sait pas comment s’en sortir. Alors il reste. De pareils choristes ne sont pas dangereux. Ils donnent au public l’illusion du nombre.</li>
+			<li>😎<strong>LE TOURISTE</strong> : On le voit de temps à autre débarquer dans la salle de répétition. On ne sait pas trop s’il fait vraiment partie de l’équipe. Il ignore quasiment tout du répertoire mais cet authentique figurant sera présent le jour du concert pour faire du play back et c’est lui qui s’inclinera le plus bas, pour saluer…</li>
+			<li>🏃‍♂️<strong>LE SPORTIF</strong> : En répétition, campé sur ses pieds tel un haltérophile, il bombe bien le torse pour prendre sa respiration, se met en apnée avant d’attaquer les notes et devient tout rouge avant d’expulser le moindre son. Il chante de la gorge, tout en force : plus c’est fort, mieux c’est…</li>
+			<li>💎<strong>LE (RARE) TENOR</strong> : Heureuse la chorale qui possède des ténors. Qu’ils soient bons ou mauvais, les ténors sont des êtres très chers. Quoi qu’il en soit, devant la pénurie, baptise-t-on volontiers «ténor» un malheureux baryton qui souffre le martyr dans les aigus, mais qui ne se plaint pas, fier qu’il est d’être un objet précieux…</li>
+			<li>⌚<strong>CELUI QUI S'ENNUIE</strong> : Consulte souvent sa montre. Il a toujours disséminé parmi ses partitions quelque article intéressant à reluquer, auelque revue ou à défaut quelque chose à manger…. Il bouge beaucoup sur place ou s’assoupit inopinément selon le cas. La plupart du temps il pense à autre chose, il observe les murs de la salle et il souffle beaucoup. Si c’est une dame, on peut la voir consulter ses messages sur son portable ou, entre deux soupirs, se limer les ongles…</li>
+			<li>👨‍🎓<strong>LE DONNEUR DE CONSEIL</strong>	: A force de l’écouter on finit par faire les mêmes erreurs que lui. C’est lui qui, généralement, offre généreusement son temps en faisant perdre le leur aux autres.</li>
+			<li>😛<strong>LE BAVARD</strong> : Il a mis au point une technique lui permettant de chanter et de parler en même temps…</li>
+			<li>🙄<strong>LE DISTRAIT</strong> : Il est rarement à la bonne page… Son classeur est un fouillis indescriptible : les chants sont rangés dans
+				n’importe quel ordre, on y trouve aussi bien la liste des commissions. Il rêve, oublie les départs et doit rattraper les autres en cours de route.</li>
+			<li>😱<strong>LE BRAILLARD</strong>	: Il chante plus fort que tout le monde dès lors qu’il croit savoir sa partie... il n’a qu’un seul credo : fortissimo. Il est moins grave qu’une épidémie, mais fait beaucoup plus de bruit…</li>
+		</ul>
+	</section>
+
+	<section class="row m-4 px-4">
+		<h2 class="text-center my-4">Les quatre voix</h2>
+		<p class="fs12">Dans tout chœur, il y a quatre registres vocaux : soprano, alto, ténor et basse. Eux-mêmes sont parfois divisés en deux, ce qui conduit à des plaisanteries continuelles au sujet des premières et des deuxièmes basses. Chaque registre chante dans une tessiture différente, et chacun a sa propre personnalité. On peut se demander pourquoi le fait de chanter des notes différentes peut modifier le comportement. Il est vrai que cette question mystérieuse n'a pas encore fait l'objet d'études appropriées. Il reste que les quatre registres peuvent facilement être reconnus… et voici comment :
+		</p>
+		<div class="d-flex justify-content-around my-4 voice">
+			<a class="btn" href="{{path('app_soprane')}}">SOPRANE</a>
+			<a class="btn" href="{{path('app_alto')}}">ALTO</a>
+			<a class="btn" href="{{path('app_tenor')}}">TENOR</a>
+			<a class="btn" href="{{path('app_basse')}}">BASSE</a>
+		</div>
+	</section>
+
+	<section class="row m-4 px-4">
+		<h2 class="text-center my-4">Les règles d'or du parfait choriste</h2>
+		<div class=" photo text col-12 col-md-6 col-lg-6 my-4">
+			<ul class="regles fs12">
+				<li><strong>Article n°1</strong> : N'arrive jamais à l'heure aux répétitions pour bien montrer que ta présence est attendue.</li>
+				<li><strong>Article n°2</strong> : Ne prends pas la note de départ, tu gâcherais le côté "Chorale authentique".</li>
+				<li><strong>Article n°3</strong> : Ne classe pas tes partitions, de toute façon, tu as le temps d'en demander une nouvelle à l'archiviste pendant que le chef donne des explications.</li>
+				<li><strong>Article n°4</strong> : Lors de l'échauffement, vocalise le plus de notes, tu impressionneras toujours le petit dernier arrivé au pupitre.</li>
+				<li><strong>Article n°5</strong> : Chante chaque fois une nuance au-dessus des autres pour montrer que tu es là.</li>
+				<li><strong>Article n°6</strong> : Ne note rien sur la partition, ce serait dommage d'abîmer une si belle feuille et ça enlèverait au chef le plaisir de répéter toujours les mêmes choses.</li>
+				<li><strong>Article n°7</strong> : Par humilité, laisse tes collègues assurer seuls les passages difficiles, cela les mettra en valeur.</li>
+				<li><strong>Article n°8</strong> : Jette un regard furieux vers ton collègue de pupitre le plus proche lorsque tu chantes une fausse note.</li>
+				<li><strong>Article n°9</strong> : De même, si tu fais une faute de rythme, explique aux nouveaux que c'est ce que l'on appelle "l'interprétation".</li>
+				<li><strong>Article n°10</strong> : Ne regarde que les paroles. Ne tiens pas compte des indications de nuances, de liaisons et autres, elles ne sont là que pour embellir le graphisme.</li>
+				<li><strong>Article n°11</strong> : Ne regarde pas le chef qui s'agite devant la chorale, ce n'est qu'un excentrique qui gesticule pour brasser de l'air. D'ailleurs, le chef c'est comme un préservatif : ce serait mieux sans mais c'est plus sûr avec !!!</li>			
+			</ul>
+			<img src="{{ asset('img/fille_casque.jpg') }}" alt="photo fille casque">
+		</div>
+		<div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/ecouteurs.jpg') }}" alt="photo ecouteurs sur partitions">
+			<ul class="regles fs12">
+				<li><strong>Article n°12</strong> :	Dès que le chef s'arrête pour donner une explication, profites-en pour parler des dernières rumeurs de la chorale avec ton voisin. Il est en effet nécessaire de connaître l'évolution des nouveaux couples de la chorale pour ne pas faire de gaffes.</li>
+				<li><strong>Article n°13</strong> :	Si tu es perdu(e) dans la partition, ne demande pas aux basses à quelle mesure on est, ils ne le savent pas non plus.</li>
+				<li><strong>Article n°14</strong> :	Ne réponds jamais aux courriers du (ou de la) secrétaire dans les délais demandés. Cela obligera le chef à t'appeler personnellement sur ton portable pour connaître ta réponse. Il te donnera ainsi une importance digne des plus grands solistes.</li>
+				<li><strong>Article n°15</strong> :	Évite de croiser trop souvent la trésorière qui va systématiquement te rappeler que tu ne lui as pas fait parvenir ton chèque d'adhésion.</li>
+				<li><strong>Article n°16</strong> :	Sois toujours sympa avec le sous-chef, c'est elle qui subit la mauvaise humeur du chef après la répétition.</li>
+				<li><strong>Article n°17</strong> :	Pars le plus discrètement possible dès la fin de la répétition, tu éviteras ainsi de devoir ranger la salle de répétition. De toute façon, tu sais pouvoir compter sur le Chef, il est là pour cela. En matière de déménagement, c'est un spécialiste.</li>
+				<li><strong>Article n°18</strong> :	Si tu es 'Basse' et que tu regrettes de ne pas pouvoir apercevoir les jolies jambes des jeunes sopranes en minijupes parce que tu es au fond de la chorale, une seule solution : passe l'examen de chef !!!</li>
+				<li><strong>Article n°19</strong> :	Fais un sourire lorsque tu aperçois le Président, c'est un personnage important de la chorale, même si tu ne le vois qu'une fois par an, au moment de son discours devant Monsieur le Maire.</li>
+				<li><strong>Article n°20</strong> : Enfin, aux concerts, arrange-toi pour avoir une petite différence vestimentaire afin que l'on te distingue mieux sur les photos.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="row m-4 px-4">
+		<h2 class="text-center my-4">Anthologie du portrait de choriste (suite)</h2>
+		<ul class="regles fs12">
+			<li>👴<strong>CELUI QUI A PASSE L'AGE</strong> : On l’a déjà éjecté de plusieurs chorales mais il insiste. Sa voix chevrote, il manque d’air… Ayant perdu une partie de son acuité auditive il avance au juger et improvise beaucoup.</li>
+			<li>👩‍🎤<strong>LA COMPLEXEE</strong> : Le plus difficile est pour elle est… de chanter ! Aussi a-t-elle une toute petite voix. Elle n’attaque jamais franchement les notes, surtout dans la nuance forte ; elle redoute les couacs… Celle-là peut chanter faux à satiété sans que cela dérange quiconque. Avec son demi-décibel elle est inaudible.</li>
+			<li>🕵️‍♂️<strong>LE CONSCIENCIEUX</strong> : Obsédé des annotations, celui-là note tout sur ses partitions. Il souligne, surligne, multiplie les ajouts, les
+				couleurs, fait des renvois, des commentaires. Personne ne s’y retrouverait. Pas même lui.</li>
+			<li>👨‍🎤<strong>CELUI QUI A "DE LA VOIX"</strong> : Pour obtenir une sonorité harmonieuse il est nécessaire d’homogénéiser le timbre des pupitres. Les voix les plus timbrées se voient sommées de rentrer dans le rang. Alors malheur à celui qui possède un bel organe. Celui qui a de la voix sera souvent prié… de se taire.</li>
+			<li>😇<strong>LE SENSIBLE</strong> : Un moindre pianissimo l’émeut, il aime la musique et souvent elle le bouleverse. Il a souvent la larme à l’oeil. et au premier problème relationnel, il en perd le sommeil et fond de cinq kilos. Il souffre en silence mais la musique finit par le consoler de tous ses maux.</li>
+			<li>🤬<strong>LE RALEUR</strong> : Il n’est jamais content, n’aime pas le programme, trouve que l’on apprend trop vite ou trop lentement, que le calendrier est trop chargé ou trop maigre.. De toute façon la tenue de concert est ridicule et il ne supporte pas la façon de travailler du chef…. Il se demande ce qu’il fait là. Les autres se posent la même question !</li>
+			<li>😝<strong>CELUI QUI RECHIGNE à CHANTER EN ETRANGER</strong> : Il veut bien chanter n’importe quoi, mais surtout pas en étranger. Il a l’oreille musicale, mais pas la mémoire des sons. Sa prononciation est laborieuse, et maladroite. Il bute sur chaque mot. C’est une souffrance pour lui et pour ses voisins.</li>
+			<li>👨‍🏫<strong>L'ENSEIGNANT</strong> : Il commet parfois l’exploit de maîtriser les rudiments du solfège. De plus il est souvent ouvert aux attentes du chef. C’est un élément fort appréciable pour une chorale. Bien qu’ayant appris, à l’IUFM, à placer efficacement son larynx afin d’éviter l’extinction, lorsqu’il chante, l’enseignant a beaucoup de mal à retrouver les bonnes sensations. Celui-là qui ne peut s’impliquer sensuellement, le fait…
+				pédagogiquement…</li>
+			<li>👨‍💻<strong>L'INFORMATICIEN</strong> : Il rentre toutes ses partitions dans le programme de son ordinateur et les réécrit en plus gros. Car il travaille ses chants au bureau. Souvent il arrive à la répétition avec une autre version d’une oeuvre, découverte par inadvertance sur Internet. Il est alors tout fier d’exhiber sa trouvaille. Pour lui, la musique reste avant tout une discipline athématique et le solfège un code binaire. Il ne communique d’ailleurs avec les autres choristes que par courrier électronique. Rien d’étonnant, alors, à ce que, parfois au beau milieu d’un chant, il bugue.</li>
+			<li>Et il y aurait encore le psychologue, le dragueur, l’étudiant fauché, le naïf, l’étourdi, celui qui a de l’ambition… le couple âgé,</li>
+			<li>👨‍⚖️<strong>LE JURISTE</strong> : Tiens le juriste :Il ramène tout aux statuts de l’association et à la loi. Il intervient lors des assemblées générales pour remettre les responsables sur les rails dès lors que ces derniers s’en écarteraient un tantinet. Avec lui on ne peut pas dévier. Il est la garantie morale et l’assurance juridique de la chorale.</li>
+			<li>Et enfin très rare : <strong>LE CHORISTE NORMAL</strong>, Celui-là n’affiche pas de tare particulière, il ne jalouse pas ses congénères, est né équilibré, n’a pas l’esprit tordu mais aime simplement chanter. Il n’a pas une voix extraordinaire, mais juste. Il possède quelques notions de solfège. Il a bon caractère, ne médit jamais. Il aime bien tous styles : classique, romantique, même la variété. Celui-là ne se fait pas remarquer, on l’oublierait presque, sinon aux concerts : car c’est lui qui assure le mieux. C’est le choriste idéal, le préféré du chef de choeur. Un cas… très rare...</li>
+			<li>Il y aurait encore l’inquiet, le cadre, l’agressif, le soliste et bien d’autres mais n’oublions pas</li>
+			<li>🤵<strong>LE BON PRESIDENT</strong> : Un homme (ou une femme) qui connaît bien le fonctionnement de la chorale pour l’avoir pratiquée pendant de nombreuses années, il est expérimenté, compétent et respectable. Il a une bonne présentation. Les chevelus en jogging avec piercing à la narine ont peu de chance d’hériter de la fonction. Il sait écouter ses interlocuteurs, entendre leurs doléances, analyser les problèmes, définir les objectifs, planifier les actions et en fin de compte mener à bien ses projets personnels en ne tenant compte de l’avis de personne. Donc le président doit être entêté. Cependant un obstacle subsiste, le chef de chœur ! Et c’est bien là le drame du président car il doit savoir humblement s’effacer devant le maestro au
+				moment de recueillir les fleurs du succès car, malgré ses responsabilités, le président ne tient pas la baguette ! Cependant le président saura se rattraper et briller, en particulier quand il fera des discours.</li>
+			<li>Mais que serait une chorale sans ce fameux… <h3>🤴Chef de chœur</h3>
+				Le chef de chœur rayonne sur ses ouailles, se pavane parmi sa cour. Caractériel, il s’enflamme volontiers au moindre couac, devient tout rouge et pique des colère noires. Mais c’est pour le bien de la collectivité. Capricieux, il change souvent d’avis. Il est quelquefois bizarre mais c’est un artiste. Qu’il soit devenu chef par vocation, par un concours de circonstances ou par le plus grand des hasards, qu’il soit chanteur sur le déclin ou jeune prof de musique, qu’il soit bénévole ou rémunéré, il est avant tout un être travailleur, un utopiste ambitieux et surtout un homme extrêmement patient. Pour accomplir sa tâche il doit avoir un moral très solide. Parmi ses nombreuses responsabilités, nous citerons en vrac, le recrutement des choristes, le choix du répertoire, l’élaboration d’une saison équilibrée, l’organisation des répétitions, l’animation du groupe. Il doit être un bon communicateur. Bref un vrai chef de chœur est tout cela à la fois : sélectionneur, entraîneur, soigneur,  éducateur, psychologue, psychiatre… Et, en plus, il doit être MUSICIEN. Alors qu’on l’aime ou qu’on ne le supporte pas, qu’il soit respectueux ou insultant, sympa ou mal embouché, qu’il suggère la musique ou que l’on ne comprenne rien à sa battue, le chef est le chef, il faut lui obéir : un point c’est tout !</li>
+			<li>Propos recueillis par Sylvie MAURICE lors du Congrès de l’ASCA du 12 octobre 2008</li>
+		</section>
+
+
+	</div>
+</section>{% endblock %}

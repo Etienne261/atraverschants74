@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enregistrer -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">S'ENREGISTRER</h1>
+	<section class="row m-4 px-4">
+		<video id="gum" playsinline autoplay muted></video>
+		<video id="recorded" playsinline loop></video>
+
+		<div>
+			<button id="start">Start camera</button>
+			<button id="record" disabled>Start Recording</button>
+			<button id="play" disabled>Play</button>
+			<button id="download" disabled>Download</button>
+		</div>
+
+		<div>
+			Recording format:
+			<select id="codecPreferences" disabled></select>
+		</div>
+		<div>
+			<h4>options de contraintes de flux multimédia</h4>
+			<p>Echo cancellation:
+				<input type="checkbox" id="echoCancellation"></p>
+		</div>
+
+		<div>
+			<span id="errorMsg"></span>
+		</div>
+
+		{# <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a> #}
+
+	</section>
+	{% block javascripts %}
+		<!-- include adapter for srcObject shim -->
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<script src="{{ asset('js/main.js') }}" async></script>
+		<script src="../../../js/lib/ga.js"></script>
+	{% endblock %}
+{% endblock %}

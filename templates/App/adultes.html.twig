@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Choeur d'Adultes -
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">CHOEUR D'ADULTES</h1>
+	<section class="row m-4 px-4 adultes">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">L'histoire</h2>
+			<p class="mx-2 py-2">
+				Vers la fin des années 70, un groupe d'habitants de Chaumont, petit village du Vuache près de Frangy (74), amoureux du chant, décide de se rassembler autour d'un chef de choeur, Marc Reymond, afin d'exprimer leur passion. Ainsi ils font naître la chorale de Chaumont.
+				Quelques années plus tard, Marc Reymond décide de partir. Alain Mercier, résidant à Saint Julien en Genevois, reprend la direction de la chorale. Traversant le mont Sion pour venir à Chaumont, Alain se fait rapidement accompagner de quelques habitants de Saint Julien et de ses environs. Pendant une quinzaine d'années, il donne une forte impulsion à la chorale qui prend une dimension quasi départementale. En effet, lors de son dixième anniversaire, elle ne compte pas moins de 90 choristes. Alain Mercier choisit des oeuvres importantes : une Messe Brève de Mozart, les Carmina Burana de Carl Orff, La Misa Criolla d'Ariel Ramirez.
+				Dans les années 90, la chorale quitte Chaumont, s'installe à Frangy, décide de changer de nom et devient la chorale « A Travers Chants ». « A Travers Chants », toujours dirigée par Alain Mercier, participe à l'automne 2000 au festival Verdi à Collonges sous Salève accompagnée par l'Echo des Usses. Alain Mercier émet le souhait de quitter la direction de la chorale pour retrouver le plaisir de chanter seul ou en groupe.
+				Un choriste Christian Rollin propose alors de diriger, le temps de trouver quelqu'un.
+			</p>
+			<div class="photo">
+				<img src="{{ asset('img/adultesbis.jpg') }}" alt="photo chorale adultes">
+			</div>
+		</div>
+		<div class="col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les répétitions</h2>
+			<p class="mx-2 py-2">
+				<h3 class="text-center">
+					<strong>lundi 20h15-22h15
+					ancienne école primaire - Frangy</strong>
+				</h3>
+			</p>
+			<div class="photo">
+				<img src="{{ asset('img/adultes.jpg') }}" alt="photo chorale adultes">
+			</div>
+
+			<p class="text fs12">
+				Puis c'est au tour de Jean Durand de tenter de prendre la baguette. Au cours de la saison 2000-2001, les choristes sont dirigés par deux chefs : Alain Mercier et Jean Durand. L'été 2001 Alain peut partir définitivement.Pendant ces sept années de direction, Jean Durand monte de nombreuses oeuvres baroques accompagnées de jeunes musiciens d'instruments à corde et de Pierre Staehle, organiste annécien. Pendant ces sept ans, la crèche vivante d'Yvan Audouard, mise en scène et interprétée par des acteurs amateurs est accompagnée par la chorale : c’est la Pastorale des Santons de Provence.
+				Au départ de Jean Durand, en septembre 2007, la chorale « A Travers Chants » accueille un jeune chef Olivier Clément, qui donne un nouveau souffle à ce groupe tant par ses compétences, son dynamisme, sa bonne humeur que par sa façon de faire aimer le chant et la musique.
+				Depuis septembre 2016, c'est Nadine Touchard qui a repris la baguette de chef avec les mêmes qualités que ses prédécesseurs.
+			</p>
+		</div>
+	</section>
+{% endblock %}

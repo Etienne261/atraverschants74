@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Soprane - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center my-4">SOPRANE</h1>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<h2 class="text-center">Les Sopranos</h2>
+			<p class="">
+				Les sopranos sont celles qui chantent le plus haut, ce qui leur fait croire qu'elles dominent le monde. 
+                Elles se considèrent bafouées si on ne leur permet pas de monter au moins au fa "d'en haut" dans n'importe quel 
+                mouvement de n'importe quelle œuvre. Lorsqu'elles y arrivent, elles tiennent les notes au moins une fois et demie 
+                la durée requise par le compositeur et/ou le chef de chœur, puis elles se plaignent que ça tue leur voix et que 
+                le compositeur et le chef sont des sadiques. Bien qu'elles considèrent tous les autres registres comme inférieurs 
+                au leur, elles ont des attitudes variées à l'égard de chacun d'eux. Les altos sont aux sopranos ce que les 
+                seconds violons sont aux premiers violons : c'est agréable harmonieusement, mais pas vraiment nécessaire. Toute 
+                soprano pense intimement que l'on pourrait supprimer les altos sans changer l'essence même de l’œuvre, et elles 
+                ne comprennent pas pourquoi il y a des gens pour chanter dans cette tessiture, c'est si ennuyeux.
+			</p>
+            <div class="photo">
+        	    <img src="{{ asset('img/maria_callas.jpg') }}" alt="photo maria callas">
+            </div>
+		</div>
+        <div class="photo col-12 col-md-6 col-lg-6 my-4">
+			<img src="{{ asset('img/soprane.png') }}" alt="photo castafiore">
+            <div class="text">
+                <p class="my-4">
+                    En ce qui concerne les ténors, on aime bien en avoir autour de soi. En plus des possibilités de flirt, car il est
+                    bien connu que les sopranos ne flirtent jamais avec les basses, les sopranos aiment chanter les duos avec les
+                    ténors parce que, du haut de leur stratosphère, elles aiment les voir travailler durement pour arriver dans une
+                    tessiture qu'elles considèrent basse à moyenne. Quant aux basses, ils chantent beaucoup trop fort, et toujours
+                    faux (comment peut-on chanter juste dans une tessiture si basse ?) et de toute façon, il doit y avoir un
+                    problème avec ces gens qui chantent en clé de fa. Pourtant, bien qu'elles se pâment à l'écoute des ténors, 
+                    elles finissent quand même par rentrer à la maison avec les basses.
+                </p>
+            </div>
+		</div>
+	</section>
+  
+{% endblock %}

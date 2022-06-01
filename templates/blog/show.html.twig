@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{blog.tittle}}
+	-
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-4">DETAILS DE L'ARTICLE :
+		{{blog.tittle}}</h1>
+	<section class="row m-4 px-4">
+		<div class="text col-12 col-md-6 col-lg-6 my-4">
+			<a href="{{path('blog_show', {id:blog.id})}}" class="btn">
+				<h2 class="text-center">{{ blog.tittle }}</h2>
+			</a>
+			<p class="">{{ blog.content }}</p>
+		</div>
+		{% for ImageBlog in blog.ImagesBlog %}
+			<div class="photo col-12 col-md-6 col-lg-6 my-4">
+				<img
+				class="img-fluid" src="{{asset('/uploads/'~ ImageBlog.name)}}" alt="image téléchargée">
+			{# <a href="{{path('song_delete_image' , {id: image.id})}}" data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer l'image</a> #}
+			</div>
+		{% endfor %}
+	</div>
+</section>
+<div class="d-flex justify-content-start example-wrapper">
+	<a href="{{path('blog_delete', {id:blog.id})}}" class="ms-4 btn">Supprimer l'article
+		"{{blog.tittle}}"
+		<i class="fa-solid fa-trash"></i>
+	</a>
+</div>
+<div class="d-flex justify-content-start example-wrapper my-2">
+	<a href="{{path('blog_edit', {id:blog.id})}}" class="ms-4 btn">Editer l'article
+		"{{blog.tittle}}"
+		<i class="fa-solid fa-pen-to-square"></i>
+	</a>
+</div>
+<div class="d-flex justify-content-center example-wrapper my-2">
+	<a href="{{path('blog_index')}}" class="btn">Revenir au blog
+		<i class="fa-solid fa-rotate-left"></i>
+	</a>
+</div>{% endblock %}

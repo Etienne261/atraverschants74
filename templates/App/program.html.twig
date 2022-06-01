@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programme  -
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	<h1 class="text-center my-4">DEMANDEZ LE PROGRAMME</h1>
+	<section class="row m-4 px-1 px-lg-4 my-4">
+        <div class="text col-12 col-md-6 col-lg-6 my-4">
+            <h2 class="text-center">Les chefs de choeurs</h2>
+            <h3>présentent leur futur programme respectivement pour les adultes et pour les enfants:</h3>
+            <p class="mx-2 py-2">
+            <strong>Adultes</strong>: une base autour de Gabriel Fauré (dont le Cantique de Jean Racine), accompagnée de variété française et étrangère...
+            (autour de l'eau)
+            </p>
+            <p class="mx-2 py-2">
+            <strong>Enfants</strong>: Le Conte "Emilie Jolie" : chants avec l'harmonie de Frangy, et des chansons autour de l'eau aussi...!
+            </p> 
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 my-4">
+			<div class="photo">
+				<img src="{{ asset('img/eau.jpg') }}" alt="photo pixabay d'une goutte d'eau">
+			</div>
+		</div>
+	</section> 
+{% endblock %}		
