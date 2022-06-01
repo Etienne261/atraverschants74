@@ -1,6 +1,7 @@
 framework:
     messenger:
         failure_transport: failed
+        # reset services after consuming messages
 
         transports:
             # https://symfony.com/doc/current/messenger.html#transport-configuration
