@@ -1,0 +1,11 @@
+:root {
+    --dark: rgb(19,19,19);
+    --light: rgb(248,248,248);
+    --accent: rgb(220,43,49);
+    --incolor: #11ffee00;
+    --garden: #194536;
+    --spacing: 1.5rem;
+    --max-width:1280px;
+    --typo: Poppins-Regular;
+    --typoH: gothic-manus;
+}

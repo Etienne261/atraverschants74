@@ -1,0 +1,877 @@
+/*RESET*/
+/* *,*::before, *::after {
+    box-sizing: border-box;
+} */
+@font-face {
+    font-family: "Poppins Regular";
+    src: url(../../Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Spectral-Regular";
+    src: url(../../Spectral/Spectral-Regular.ttf);
+}
+
+header {
+    font-family: "Spectral-Regular";
+
+}
+
+body {
+    margin: 0;
+    font-family: var(--typo);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+header button:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(https://127.0.0.1:8000/img/clef.png);
+    background-size: cover;
+    background-repeat: no-repeat !important;
+}
+
+.navbar-toggler-icon {
+    margin-top: -2.3rem;
+}
+
+p{
+    text-align: justify !important;
+}
+/*CONTAINER*/
+.container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing);
+}
+
+#main-header {
+    background-color: var(--dark);
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+    padding-bottom: var(--spacing);
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--light);
+    transition: 0.5s ease;
+}
+
+header a:hover {
+    color: var(--accent);
+    outline: 0;
+}
+
+#main-header .logo img {
+
+    object-fit: cover;
+    border: 1px solid var(--light);
+    border-radius: 10%;
+    width: 150px;
+    height: 150px;
+}
+
+#main-header .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#main-header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.marge {
+    margin: 2.5rem 0;
+}
+
+label {
+    color: var(--dark);
+}
+
+.color_burger {
+    visibility: hidden;
+}
+
+#main-header .navbar-links {
+
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 6rem;
+    gap: 7rem;
+    align-items: center;
+    border-top: 1px solid var(--light);
+    border-bottom: 1px solid var(--light);
+    margin-right: 3rem;
+
+}
+
+#main-header .menu {
+    padding-top: 3rem !important;
+}
+
+#main-header .linebas {
+    border-top: 1px solid var(--light);
+    margin-right: 3rem;
+    padding-left: 6rem;
+}
+
+#main-header .clef img {
+    position: absolute;
+    z-index: 1;
+    transform: translate(160px, -60px);
+    width: 12%;
+    height: 60%;
+    object-fit: cover;
+}
+
+
+/*LES SECTIONS*/
+section {
+    background-color: var(--light);
+    border: 5px solid var(--dark);
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+section .photo {
+    border-radius: 20px;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+section .photo img,
+section .photo iframe {
+    border: 1px solid var(--dark);
+    width: 100%;
+    height: 54vh;
+    border-radius: 20px;
+}
+
+.photo iframe {
+    margin-top: 3rem;
+}
+
+section .text {
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section .text p {
+    font-size: 1.2rem;
+}
+
+section .text .btn,
+section h2 .btn,
+section .voice .btn,
+.example-wrapper .btn {
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    transition: 0.25s ease;
+    margin: 1rem auto;
+
+}
+
+section .text .btn:hover,
+section h2 .btn:hover,
+section .voice .btn:hover,
+.example-wrapper .btn:hover {
+    color: var(--accent);
+    background-color: var(--light);
+    outline: 0;
+}
+
+.position {
+    position: relative;
+}
+
+.apizip{
+display: initial;
+}
+
+.inscription button{
+    margin-top: 8% !important;
+    margin-left: 10% !important;
+}
+
+.apizip button{
+    margin-top: inherit !important;
+    margin-left: 1% !important;
+}
+
+section .photo button {
+    position: absolute;
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    transition: 0.25s ease;
+    margin: 1rem auto;
+}
+
+section .photo button:hover {
+    color: var(--accent);
+    background-color: var(--light);
+    outline: 0;
+}
+/*CONTACT*/
+#contact_save{
+    margin-left: 12%;
+}
+
+/*AVIS*/
+.fa-star {
+    color: var(--light);
+    cursor: pointer;
+    padding: 0.0625rem;
+}
+
+.fa-star.gold {
+    color: var(--accent);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.stars {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 3em;
+    background-color: var(--garden);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.stars:hover .fa-star {
+    color: var(--accent);
+}
+
+.stars .fa-star:hover~.fa-star {
+    color: var(--light);
+}
+
+.supaview__rating>label:before {
+    display: inline-block;
+    margin-right: 5px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 25px;
+    font-weight: 900;
+    content: "";
+}
+
+#review {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#review button{
+    position: inherit;
+}
+.supaview__copy{
+    margin: 0 5%;
+}
+
+.supaview__rating>input:checked~label,
+.supaview__rating:not(:checked)>label:hover,
+.supaview__rating:not(:checked)>label:hover~label {
+    color: var(--accent);
+    text-shadow: 0 0 6px var(--accent);
+}
+
+.supaview__rating>label {
+    float: right;
+    color: #1C1E20;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.supaview__rating>input {
+    display: none;
+}
+
+.supaviews,
+.supaview,
+.supaerror {
+    border-radius: 10px;
+}
+
+.supaviews {
+    position: relative;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.supaviews_copy {
+    margin: 0 0.5rem;
+}
+
+.supaview__copy input,
+.supaview__copy textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #16181A;
+    color: #FFFFFF;
+    background-color: transparent;
+    outline: none;
+}
+
+.supaview,
+.supaerror {
+    margin: 0.7rem;
+    padding: 0;
+}
+
+.supaview {
+    background-color: var(--garden);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    &__stars {
+        margin-bottom: 15px;
+        font-size: 25px;
+        color: #1C1E20;
+
+        .checked {
+            color: #6ECB90;
+            text-shadow: 0 0 6px #4DA76EBD;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &__date {
+        margin-top: 15px;
+        color: #7D7F81;
+    }
+
+    &__rating {
+        display: block;
+        float: left;
+        padding: 0;
+        margin-bottom: 15px;
+        border: none;
+
+        &>input {
+            display: none;
+        }
+
+        &>label:before {
+            display: inline-block;
+            margin-right: 5px;
+
+            font-family: "Font Awesome 5 Free";
+            font-size: 25px;
+            font-weight: 900;
+            content: "\f005";
+        }
+
+        &>label {
+            float: right;
+            color: #1C1E20;
+            cursor: pointer;
+            transition: 0.15s ease-in-out;
+        }
+
+        &>input:checked~label,
+        &:not(:checked)>label:hover,
+        &:not(:checked)>label:hover~label {
+            color: #6ECB90;
+            text-shadow: 0 0 6px #4DA76EBD;
+        }
+
+        &>input:checked+label:hover,
+        &>input:checked~label:hover,
+        &>label:hover~input:checked~label,
+        &>input:checked~label:hover~label {
+            color: #4DA76EBD;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__copy {
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #16181A;
+            color: #FFFFFF;
+            background-color: transparent;
+            outline: none;
+
+            &:focus {
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+
+    &__submit {
+        padding: 10px 15px;
+        font-weight: 700;
+        color: #FFFFFF;
+        background-color: #64B883;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #6ECB90;
+        }
+    }
+}
+
+.supaerror {
+    background-color: #E56460;
+}
+/*customisation Events et concerts*/
+.event{
+    border-radius: 10px;
+    perspective: 25rem;
+    cursor: pointer;
+    transform: rotateY(-20deg) rotateX(15deg);
+    transition: 0.7s;
+}
+.event:hover{
+    transform: translateY(30px)  rotateY(-20deg) rotateX(15deg) scale(1.2);
+    z-index:3; 
+}
+
+/* customisation des ressources d'une chanson*/
+#song_ressources{
+    display: flex;
+    height: 50%;
+}
+.example-wrapper .border {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    display: flex;
+    width: 100px;
+}
+.fa-play:before {
+    margin-left: calc(100%/3) !important;
+}
+
+
+.example-wrapper .border i{
+    margin: 0 auto 1rem;
+    text-align: center;
+    display: flex;
+}
+.example-wrapper .border:nth-child(2) a,.example-wrapper .border:nth-child(4) a,.example-wrapper .border:nth-child(7) a,.example-wrapper .border:nth-child(9) a,.example-wrapper .border:nth-child(11) a {
+    color: var(--light);
+    transition: 0.5s ease;
+    font-weight: bolder;
+    align-items: center;
+}
+
+.example-wrapper .border:nth-child(2) a:hover,.example-wrapper .border:nth-child(4) a:hover,.example-wrapper .border:nth-child(7) a:hover,.example-wrapper .border:nth-child(9) a:hover,.example-wrapper .border:nth-child(11) a:hover {
+    color: var(--accent);
+}
+
+.example-wrapper .border:nth-child(1) a,.example-wrapper .border:nth-child(3) a,.example-wrapper .border:nth-child(5) a,.example-wrapper .border:nth-child(6) a,.example-wrapper .border:nth-child(8) a,.example-wrapper .border:nth-child(10) a,.example-wrapper .border:nth-child(12) a {
+    color: var(--dark);
+    transition: 0.5s ease;
+    font-weight: bolder;
+    align-items: center;
+}
+
+.example-wrapper .border:nth-child(1) a:hover,.example-wrapper .border:nth-child(3) a:hover,.example-wrapper .border:nth-child(5) a:hover,.example-wrapper .border:nth-child(6) a:hover,.example-wrapper .border:nth-child(8) a:hover,.example-wrapper .border:nth-child(10) a:hover,.example-wrapper .border:nth-child(12) a:hover {
+    color: var(--light);
+}
+
+.example-wrapper .border:nth-child(2),.example-wrapper .border:nth-child(4),.example-wrapper .border:nth-child(7),.example-wrapper .border:nth-child(9),.example-wrapper .border:nth-child(11) {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+    transition: 0.5s ease;
+
+}
+
+.example-wrapper .border:nth-child(2):hover,.example-wrapper .border:nth-child(4):hover,.example-wrapper .border:nth-child(7):hover,.example-wrapper .border:nth-child(9):hover,.example-wrapper .border:nth-child(11):hover {
+    background-color: var(--light);
+
+}
+
+.example-wrapper .border:nth-child(1),.example-wrapper .border:nth-child(3),.example-wrapper .border:nth-child(5),.example-wrapper .border:nth-child(6),.example-wrapper .border:nth-child(8),.example-wrapper .border:nth-child(10),.example-wrapper .border:nth-child(12) {
+    background-color: var(--light);
+    transition: 0.5s ease;
+
+}
+.example-wrapper .border:nth-child(1){
+    margin-left: 1.5rem !important;
+}
+.example-wrapper .border:nth-child(1):hover,.example-wrapper .border:nth-child(3):hover,.example-wrapper .border:nth-child(5):hover,.example-wrapper .border:nth-child(6):hover,.example-wrapper .border:nth-child(8):hover,.example-wrapper .border:nth-child(10):hover,.example-wrapper .border:nth-child(12):hover {
+    background-color: var(--dark);
+
+}
+
+/*url(https://cdn.custom-cursor.com/db/9882/32/anime-vocaloid-meiko-and-microphone-cursor.png) , default!important;*/
+/* VOIX*/
+.regles {
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+
+/*EVENEMENTS-CONCERTS*/
+
+
+
+/*LOGIN*/
+.toconnect {
+    width: 50%;
+    height: 54vh;
+}
+
+section .connect {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+
+#togglePassword {
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+/*INSCRIPTION*/
+.register {
+    width: 50%;
+    padding-bottom: 2rem;
+}
+
+.form-check-label {
+    color: var(--dark);
+}
+
+/*CHOEUR D'ADULTES et ENFANTS*/
+.adultes {
+    background-image: url(../img/fond_clef.png);
+    background-position: center;
+}
+
+.fs12 {
+    font-size: 1.2rem;
+}
+
+#gum{
+    width: 50%;
+}
+#recorded{
+    width: 50%;
+}
+video {
+    vertical-align: top;
+    --width: 25vw;
+    width: var(--width);
+    height: calc(var(--width) * 0.5625);
+}
+
+video:last-of-type {
+    margin: 0 0 20px 0;
+}
+
+video#gumVideo {
+    margin: 0 20px 20px 0;
+}
+
+/* LES TARIFS*/
+.tarif1 {
+    background-image: url(../img/tarif_adultes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 54vh;
+    background-size: cover;
+}
+
+.tarif2 {
+    background-image: url(../img/tarif_enfants.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 54vh;
+    background-size: cover;
+}
+
+.tarif3 {
+    background-image: url(../img/tarif_couples.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 54vh;
+    background-size: cover;
+}
+
+.fstg {
+    font-size: 5rem;
+    color: var(--accent);
+    font-weight: 900;
+    margin-left: 1rem;
+}
+
+.fsttg {
+    font-size: 10rem;
+    color: var(--light);
+    font-weight: 900;
+    margin-right: 1rem;
+}
+
+/*FOOTER*/
+footer {
+
+    background-color: var(--garden);
+
+}
+
+footer p,
+footer h5 {
+    color: var(--light);
+}
+
+footer .fa-brands {
+    font-size: 3rem;
+    color: var(--light);
+}
+
+footer .hov,
+footer i {
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+footer .hov:hover,
+footer i:hover {
+    color: var(--accent);
+    outline: 0;
+}
+
+@media screen and (max-width: 1380px) {
+    #main-header .navbar-links {
+        gap: 5rem;
+        font-size: 1rem;
+    }
+
+    section .connect {
+        padding-left: 3.5rem !important;
+        padding-right: 3.5rem !important;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    section .photo button {
+        position: static !important;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    #main-header .navbar-links {
+        gap: 3rem;
+        font-size: 1rem;
+    }
+
+    section .connect {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    #togglePassword {
+        margin-left: -40px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    #main-header .navbar-links {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .color_burger {
+        visibility: visible;
+    }
+
+    .main-menu-element {
+        border-top: 1px solid var(--light);
+    }
+
+    .button_position {
+        z-index: 1;
+        transform: translate(455px, -150px);
+        object-fit: cover;
+        background-color: var(--accent);
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link {
+        transition: 0.5s ease !important;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active:hover,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: var(--accent) !important;
+        outline: 0;
+    }
+
+    .toconnect {
+        width: 70% !important;
+    }
+
+    .fsttg {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .supaview,.supaerror {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    section .text {
+        width: 100% !important;
+    }
+
+    .register {
+        width: 70% !important;
+    }
+
+    .toconnect {
+        width: 80% !important;
+    }
+
+    section .voice {
+        flex-direction: column;
+    }
+
+    #song_ressources {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .example-wrapper .border {
+        writing-mode: inherit;
+        text-orientation: inherit;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .example-wrapper .border:nth-child(1) {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        margin-left: 0 !important;
+    }
+    .example-wrapper .border:last-child {
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    #gum{
+        width: 100%;
+    }
+    #recorded{
+        width: 100%;
+    }
+    section .connect {
+        padding-left: 3.5rem !important;
+        padding-right: 3.5rem !important;
+    }
+
+    video {
+        --width: 55vw;
+    }
+
+    .inscription button{
+        margin-top: 45% !important;
+        position: inherit !important;
+    }
+
+    footer h3,
+    footer p {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 560px) {
+    img{
+        height: auto !important;
+    }
+    .button_position {
+        z-index: 1;
+        transform: translate(250%, -150px);
+        object-fit: cover;
+    }
+
+    .register {
+        width: 90% !important;
+    }
+
+    .toconnect {
+        width: 90% !important;
+    }
+
+    .fstg {
+        font-size: 3rem;
+        margin-left: 0rem;
+    }
+
+    .fsttg {
+        font-size: 4rem;
+        margin-right: 0rem;
+    }
+
+    footer h3,
+    footer p {
+        display: flex;
+        justify-content: center;
+
+    }
+}
